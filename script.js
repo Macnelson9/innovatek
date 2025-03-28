@@ -1,5 +1,4 @@
 'use strict';
-document.querySelector('.box');
 
 // document.addEventListener('DOMContentLoaded', function () {
 //     gsap.registerPlugin(Flip, ScrollTrigger, ScrollToPlugin, TextPlugin);
@@ -9,7 +8,6 @@ document.querySelector('.box');
 //         duration: 2,
 //         scrollTrigger: {
 //             trigger: '.box',
-//             markers: true,
 //             scrub: true
 //         }
 //     })
