@@ -12,10 +12,8 @@
 :root {
     /* Background */
     --Light-Gray: #F5F7FA;
-    --Soft-White: #EAEFF3; 
     /* Primary color(Accent and CTAs) */
     --Electric-Blue: #007BFF;
-    --Tech-Purple: #5A31F4;
     /* Text */
     --Dark-Gray: #2D2D2D;
     /* Secondary accents */
@@ -24,9 +22,7 @@
     /* Dark mode */
     /* Background  */
     --Deep-Charcoal: #121212;
-    --Graphite-Black: #1E1E1E;
     /* Primary Color (Accent & CTAs): */
-     --Neon-Cyan: #00E6E6;
      --Hyper-Blue: #3F8EFC;
     /* Text  */
     --Light-Grey: #E0E0E0; 
