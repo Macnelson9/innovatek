@@ -1,5 +1,18 @@
 'use strict';
 
+// Selected elements
+const openBtn = document.getElementById('hamburger');
+const closeBtn = document.getElementById('close');
+const mobileNav = document.querySelector('.mobile-nav')
+
+openBtn.addEventListener('click', function () {
+    mobileNav.classList.add('active');
+})
+
+closeBtn.addEventListener('click', function () {
+    mobileNav.classList.remove('active');
+})
+
 // document.addEventListener('DOMContentLoaded', function () {
 //     gsap.registerPlugin(Flip, ScrollTrigger, ScrollToPlugin, TextPlugin);
     
