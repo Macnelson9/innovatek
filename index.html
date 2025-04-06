@@ -6,14 +6,16 @@
     <title>Innovatek || Innovating Tomorrow, Today</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script defer src="script.js"></script>
 </head>
 <body>
     <div class="body-container">
-        <!-- <div class="loader"></div> -->
+        <div class="loader-container">
+            <div class="loader"></div>
+        </div>
         <section class="hero">
-            <div class="hero-container">
+            <div class="hero-container" id="home">
                 <div class="left">
                     <img src="./assets/innovatek logo.png" alt="Hero image" aria-label="Hero image">
                 </div>
@@ -27,6 +29,7 @@
                         <li><a href="#testimonials">Testimonials</a></li>
                         <li><a href="#blog">Blog</a></li>
                         <li><a href="#contact">Contact</a></li>  
+                        <!-- <li><button>Dark Mode</button></li>   -->
                     </ul>
     
                     <div class="nav-cta">
@@ -61,7 +64,7 @@
             </div>
         </section>
 
-        <section class="about-us">
+        <section class="about-us" id="about">
             <div class="about-us-container">
               <h2>About Innovatek</h2>
               <p>At Innovatek, we're dedicated to pioneering technological solutions that empower businesses worldwide. Our journey began with a simple idea: to bridge the gap between innovation and practicality.</p>
@@ -72,39 +75,34 @@
               <h3>Meet the Team</h3>
               <div class="team">
                 <div class="team-member">
-                  <img src="./assets/Ethan Caldwell.png" alt="Ethan Caldwell" loading="lazy">
+                  <img class="lazy" data-src="./assets/Ethan Caldwell.png" alt="Ethan Caldwell" loading="lazy">
                   <h4>Ethan Caldwell</h4>
                   <p class="position">Founder & CEO</p>
                 </div>
                 <div class="team-member">
-                  <img src="./assets/Sophia Chen.png" alt="Sophia Chen" loading="lazy">
+                  <img class="lazy" data-src="./assets/Sophia Chen.png" alt="Sophia Chen" loading="lazy">
                   <h4>Sophia Chen</h4>
                   <p class="position">Chief Technology Officer (CTO)</p>
                 </div>
                 <div class="team-member">
-                  <img src="#" alt="Liam Foster" loading="lazy">
+                  <img class="lazy" data-src="./assets/Liam Foster.png" alt="Liam Foster" loading="lazy">
                   <h4>Liam Foster</h4>
                   <p class="position">Lead UX/UI Designer</p>
                 </div>
                 <div class="team-member">
-                  <img src="#" alt="Mia Rodriguez" loading="lazy">
+                  <img class="lazy" data-src="./assets/Mia Rodriguez.png" alt="Mia Rodriguez" loading="lazy">
                   <h4>Mia Rodriguez</h4>
                   <p class="position">Head of Product Development</p>
                 </div>
                 <div class="team-member">
-                  <img src="#" alt="Daniel Brooks" loading="lazy">
+                  <img class="lazy" data-src="./assets/Daniel Brooks.png" alt="Daniel Brooks" loading="lazy">
                   <h4>Daniel Brooks</h4>
                   <p class="position">Cybersecurity & AI Lead</p>
                 </div>
                 <div class="team-member">
-                  <img src="#" alt="Emma Stone" loading="lazy">
+                  <img class="lazy" data-src="./assets/Emma Stone.png" alt="Emma Stone" loading="lazy">
                   <h4>Emma Stone</h4>
                   <p class="position">Marketing & Growth Strategist</p>
-                </div>
-                <div class="team-member">
-                  <img src="#" alt="James Carter" loading="lazy">
-                  <h4>James Carter</h4>
-                  <p class="position">Customer Relations & Support Lead</p>
                 </div>
               </div>
           
@@ -133,37 +131,37 @@
         </section>
 
         <section class="products">
-            <div class="products-container">
+            <div class="products-container" id="services">
                 <h2>Products & Services</h2>
                 <p>Explore our range of innovative products and services designed to meet the needs of modern businesses.</p>
                 <div class="product-list">
                     <div class="product-item">
-                        <img src="./assets/Ethan Caldwell.png" alt="Product 1" loading="lazy">
+                        <img class="lazy" data-src="./assets/AI.jpeg" alt="Product 1" loading="lazy">
                         <h3>Artificial Intelligence (AI) Solutions</h3>
                         <p>Smart automation, deep learning, and AI-driven analytics.</p>
                     </div>
                     <div class="product-item">
-                        <img src="#" alt="Product 2" loading="lazy"> 
+                        <img class="lazy" data-src="./assets/IOT.jpg" alt="Product 2" loading="lazy"> 
                         <h3>Internet of Things (IoT)</h3>
                         <p>Connected devices, smart home automation, and industrial IoT.</p>
                     </div>
                     <div class="product-item">
-                        <img src="#" alt="Product 3" loading="lazy">
+                        <img class="lazy" data-src="./assets\14_01edge-cloud-computing.jpg" alt="Product 3" loading="lazy">
                         <h3>Cloud Computing & SaaS</h3>
                         <p>Scalable cloud-based software and secure enterprise solutions.</p>
                     </div>
                     <div class="product-item">
-                        <img src="#" alt="Product 4" loading="lazy">
+                        <img class="lazy" data-src="./assets\cyber-security.jpg" alt="Product 4" loading="lazy">
                         <h3>Cybersecurity</h3>
                         <p>AI-driven threat detection, data encryption, and secure networking.</p>
                     </div>
                     <div class="product-item">
-                        <img src="#" alt="Product 5" loading="lazy">
+                        <img class="lazy" data-src="./assets\software.png" alt="Product 5" loading="lazy">
                         <h3>Software Development</h3>
                         <p>Web & mobile applications powered by next-gen frameworks.</p>
                     </div>
                     <div class="product-item">
-                        <img src="#" alt="Product 6" loading="lazy">
+                        <img class="lazy" data-src="./assets\The-RD-Labs.png" alt="Product 6" loading="lazy">
                         <h3>R&D and Innovation Lab</h3>
                         <p>Exploring breakthroughs in quantum computing, edge AI, and sustainable tech.</p>
                     </div>
@@ -172,7 +170,7 @@
         </section>
 
         <section class="testimonials">
-            <div class="testimonials-container">
+            <div class="testimonials-container" id="testimonials">
                 <h2>What Our Clients Say</h2>
                 <div class="testimonial-item">
                     <p>"Innovatek transformed our business with their innovative solutions. Highly recommend!"</p>
@@ -190,29 +188,29 @@
         </section>
 
         <section class="blog">
-            <div class="blog-container">
+            <div class="blog-container" id="blog">
                 <h2>Blog Section</h2>
 
                 <p>Stay updated with the latest trends and insights in technology and innovation.</p>
 
                 <div class="blog-posts">
                     <div class="blog-post">
-                        <img src="#" alt="blog post image" loading="lazy">
+                        <img class="lazy" data-src="./assets\innovation.jpeg" alt="blog post image" loading="lazy">
                         <h3>Innovating for the Future</h3>
-                        <p>Discover how Innovatek is shaping the future of technology with innovative solutions.</p>
+                        <p>See how Innovatek drives tech innovation for the future.</p>
                     </div>
                     <div class="blog-post">
-                        <img src="#" alt="blog post image" loading="lazy">
+                        <img class="lazy" data-src="./assets\tech trends.jpeg" alt="blog post image" loading="lazy">
                         <h3>Tech Trends to Watch</h3>
                         <p>Explore the latest trends in technology and how they impact businesses.</p>
                     </div>
                     <div class="blog-post">
-                        <img src="#" alt="blog post image" loading="lazy">
+                        <img class="lazy" data-src="./assets\success stories.jpeg" alt="blog post image" loading="lazy">
                         <h3>Success Stories</h3>
                         <p>Read about our success stories and how we've helped businesses thrive.</p>
                     </div>
                     <div class="blog-post">
-                        <img src="#" alt="blog post image" loading="lazy">
+                        <img class="lazy" data-src="./assets\news.jpeg" alt="blog post image" loading="lazy">
                         <h3>Innovatek in the News</h3>
                         <p>Catch up on the latest news and updates about Innovatek and our initiatives.</p>
                     </div>
@@ -221,7 +219,7 @@
         </section>
 
         <section class="contact">
-            <div class="contact-container">
+            <div class="contact-container" id="contact">
                 <div class="contact-left">
                     <h2>Contact Us</h2>
                     <p class="p-intro">If you have any questions or inquiries, feel free to reach out to us.</p>
@@ -249,9 +247,7 @@
                     </div>
                 </div>
 
-                <div class="contact-right">
-                    <div class="map"></div>
-                </div>
+                <div id="map"></div>
             </div>
         </section>
           

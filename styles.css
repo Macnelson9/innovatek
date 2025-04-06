@@ -37,6 +37,7 @@ body {
     font-family: "Open Sans", sans-serif;
     color: var(--Dark-Gray);
     cursor: default;
+    scroll-behavior: smooth;
 }
 
 img {
@@ -59,6 +60,86 @@ a {
 h1 {
     font-family: 'Tektur', sans-serif;
 }
+
+button {
+    cursor: pointer;
+}
+
+.loader {
+    position: relative;
+    width: 75px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(var(--Hyper-Blue) 50px, transparent 0), linear-gradient(var(--Electric-Blue) 50px, transparent 0), linear-gradient(var(--Deep-Charcoal) 50px, transparent 0); 
+    background-size: 12px 100%;
+    background-position: 0px 90px, 15px 78px, 30px 66px, 45px 58px, 60px 50px;
+    transform: rotate(-15deg);
+    border-radius: 8px;
+    animation: pillerPushUp 4s linear infinite;
+  }
+  
+  .loader:after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: var(--Electric-Blue);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    animation: ballStepUp 4s linear infinite;
+  }
+
+@keyframes pillerPushUp {
+  0% , 40% , 100% {
+    background-position: 0px 90px, 15px 78px, 30px 66px
+}
+  50% ,  90% {
+    background-position: 0px 50px, 15px 58px, 30px 66px, 45px 78px, 60px 90px
+}
+}
+
+@keyframes ballStepUp {
+    0% {transform: translate(0,0)}
+    5% {transform: translate(4px, -7px)}
+    10% {transform: translate(8px, -14px)}
+    15% {transform: translate(15px, -10px)}
+    20% {transform: translate(23px, -15px)}
+    25% {transform: translate(27px, -22px)}
+    30% {transform: translate(30px, -20px)}
+    35% {transform: translate(31px, -10px)}
+    40% {transform: translate(32px, 0)}
+    45% {transform: translate(31px, -10px)}
+    50% {transform: translate(30px, -20px)}
+    55% {transform: translate(27px, -25px)}
+    60% {transform: translate(23px, -30px)}
+    65% {transform: translate(19px, -27px)}
+    70% {transform: translate(15px, -25px)}
+    75% {transform: translate(11px, -32px)}
+    80% {transform: translate(7px, -37px)}
+    85% {transform: translate(5px, -20px)}
+    90% {transform: translate(3px, -10px)}
+    95% {transform: translate(2px, -6px)}
+    100% {transform: translate(0,0)}
+  }
+
+.loader-container {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+    
 
 /* Navigation styles */
 .nav-links {
@@ -389,7 +470,7 @@ nav.mobile-nav.active {
 .contact-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
 }
 
 .contact-left {
@@ -462,6 +543,13 @@ form label {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Map styles */
+#map {
+    height: 300px;
+    width: 100%;
+    border-radius: 7px;
 }
 
 @media (min-width: 700px) {
@@ -650,6 +738,13 @@ form label {
         width: 100%;
     }
 
+    .blog-post img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        height: 200px;
+        max-width: 100%;
+    }
+
     .blog-post p {
         width: 90%;
         margin: 0 auto;
@@ -669,6 +764,10 @@ form label {
 
     .p-intro {
         text-align: center;
+    }
+
+    #map {
+        height: 400px; 
     }
 }
 
@@ -759,5 +858,13 @@ form label {
 
     .contact-container {
         flex-direction: row;
+    }
+
+    .contact-left {
+        width: 80%;
+    }
+
+    #map {
+        height: 700px;  
     }
 }
